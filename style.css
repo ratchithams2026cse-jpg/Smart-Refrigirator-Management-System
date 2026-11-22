@@ -1,0 +1,402 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0b1220;
+    color: #f1f5f9;
+    min-height: 100vh;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    background: #111c2e;
+    border-bottom: 1px solid #26364c;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.brand-icon {
+    font-size: 35px;
+    color: #38bdf8;
+}
+
+.brand h1 {
+    font-size: 21px;
+    letter-spacing: 2px;
+}
+
+.brand p {
+    color: #94a3b8;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.status {
+    color: #86efac;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 25px;
+}
+
+.welcome {
+    background: linear-gradient(120deg, #172c49, #164e63);
+    padding: 35px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border: 1px solid #31536e;
+}
+
+.eyebrow {
+    color: #7dd3fc;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.welcome h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.welcome h2 span {
+    color: #67e8f9;
+}
+
+.welcome p {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.fridge-icon {
+    font-size: 65px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 17px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: #172438;
+    padding: 22px;
+    border-radius: 14px;
+    border: 1px solid #2b3b51;
+}
+
+.stat-card span {
+    font-size: 25px;
+}
+
+.stat-card p {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.stat-card h2 {
+    font-size: 28px;
+    margin-top: 5px;
+}
+
+.warning h2 {
+    color: #fbbf24;
+}
+
+.danger h2 {
+    color: #fb7185;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.5fr;
+    gap: 20px;
+}
+
+.panel {
+    background: #172438;
+    border: 1px solid #2b3b51;
+    padding: 25px;
+    border-radius: 16px;
+}
+
+.panel h2 {
+    font-size: 20px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-top: 8px;
+    margin-bottom: 23px;
+}
+
+form label {
+    display: block;
+    font-size: 13px;
+    margin: 15px 0 8px;
+    color: #cbd5e1;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    background: #0d192b;
+    border: 1px solid #34465e;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus, select:focus {
+    border-color: #38bdf8;
+}
+
+.add-button {
+    width: 100%;
+    margin-top: 23px;
+    padding: 14px;
+    background: #0891b2;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.add-button:hover {
+    background: #0e7490;
+    transform: translateY(-2px);
+}
+
+.inventory-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.live-label {
+    color: #86efac;
+    font-size: 11px;
+    border: 1px solid #166534;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.alerts {
+    margin-bottom: 15px;
+}
+
+.alert-message {
+    background: #3b2c17;
+    color: #fcd34d;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.food-list {
+    display: grid;
+    gap: 12px;
+}
+
+.food-item {
+    background: #0d192b;
+    border: 1px solid #2b3b51;
+    padding: 16px;
+    border-radius: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.food-item h3 {
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.food-item p {
+    font-size: 12px;
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
+.food-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.badge {
+    font-size: 11px;
+    padding: 6px 9px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.fresh {
+    background: #123c31;
+    color: #86efac;
+}
+
+.soon {
+    background: #493719;
+    color: #fcd34d;
+}
+
+.expired {
+    background: #4b202a;
+    color: #fda4af;
+}
+
+.delete-button {
+    background: #7f1d1d;
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background: #b91c1c;
+}
+
+.empty {
+    text-align: center;
+    padding: 45px 10px;
+    color: #94a3b8;
+}
+
+.empty span {
+    font-size: 40px;
+}
+
+.empty h3 {
+    margin: 12px 0 8px;
+    color: #e2e8f0;
+}
+
+.empty p {
+    font-size: 13px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 35px;
+    padding: 20px;
+    border-top: 1px solid #26364c;
+    color: #94a3b8;
+    font-size: 12px;
+    line-height: 2;
+}
+
+@media (max-width: 800px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .topbar {
+        padding: 18px;
+    }
+
+    .status {
+        font-size: 9px;
+    }
+
+    .welcome {
+        padding: 22px;
+    }
+
+    .welcome h2 {
+        font-size: 23px;
+    }
+
+    .fridge-icon {
+        font-size: 40px;
+    }
+
+    .container {
+        padding: 22px 14px;
+    }
+
+    .panel {
+        padding: 17px;
+    }
+}
+
+/* FOOD IMAGE DESIGN */
+
+.food-image {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #38bdf8;
+    flex-shrink: 0;
+}
+
+.food-details {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.food-text {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+    .food-image {
+        width: 48px;
+        height: 48px;
+    }
+
+    .food-item {
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Fridge | Food Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <span class="brand-icon">❄</span>
+            <div>
+                <h1>SMART FRIDGE</h1>
+                <p>Smart Food Management System</p>
+            </div>
+        </div>
+        <div class="status">
+            <span class="status-dot"></span> SYSTEM ACTIVE
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <div>
+                <p class="eyebrow">YOUR SMART KITCHEN</p>
+                <h2>Welcome to your <span>Smart Fridge.</span></h2>
+                <p>Manage your food. Track expiry dates. Reduce food waste.</p>
+            </div>
+            <div class="fridge-icon">🧊</div>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <span>🛒</span>
+                <p>Total Items</p>
+                <h2 id="totalItems">0</h2>
+            </div>
+            <div class="stat-card">
+                <span>🥬</span>
+                <p>Fresh Items</p>
+                <h2 id="freshItems">0</h2>
+            </div>
+            <div class="stat-card warning">
+                <span>⏰</span>
+                <p>Expiring Soon</p>
+                <h2 id="expiringItems">0</h2>
+            </div>
+            <div class="stat-card danger">
+                <span>⚠️</span>
+                <p>Expired Items</p>
+                <h2 id="expiredItems">0</h2>
+            </div>
+        </section>
+
+        <section class="content-grid">
+
+            <div class="panel add-panel">
+                <h2>＋ Add Food Item</h2>
+                <p class="subtitle">Enter your refrigerator food details.</p>
+
+                <form id="foodForm">
+                    <label>Food Name</label>
+                    <input type="text" id="foodName"
+                        placeholder="Example: Milk" required maxlength="40">
+
+                    <label>Food Category</label>
+                    <select id="foodCategory" required>
+                        <option value="Dairy">Dairy</option>
+                        <option value="Fruits">Fruits</option>
+                        <option value="Vegetables">Vegetables</option>
+                        <option value="Beverages">Beverages</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label>Quantity</label>
+                    <input type="number" id="foodQuantity"
+                        placeholder="Example: 2" min="1" max="999" required>
+
+<label>Food Image (Optional)</label>
+<input type="file" id="foodImage" accept="image/*">
+ <label>Expiry Date</label>
+                    <input type="date" id="expiryDate" required>
+
+                    <button type="submit" class="add-button">
+                        + Add to Smart Fridge
+                    </button>
+                </form>
+            </div>
+
+            <div class="panel inventory-panel">
+                <div class="inventory-heading">
+                    <div>
+                        <h2>Food Inventory</h2>
+                        <p class="subtitle">Your refrigerator contents</p>
+                    </div>
+                    <span class="live-label">LIVE</span>
+                </div>
+
+                <div id="alerts" class="alerts" aria-live="polite"></div>
+                
+                <input
+    type="text"
+    id="searchFood"
+    placeholder="Search food items..."
+>
+
+                <div id="foodList" class="food-list">
+                    <input
+   
+>
+                    <button type="button" id="clearAllBtn">Clear All Foods</button>
+                    <div class="empty">
+                        <span>🧺</span>
+                        <h3>Your fridge is empty!</h3>
+                        <p>Add your first food item to get started.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>SMART FRIDGE © 2026 | Eat Fresh. Save Food. Live Smart.</p>
+            <p>Developed by: <strong>Ratchitha MS</strong> | CSE</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
